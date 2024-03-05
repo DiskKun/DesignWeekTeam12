@@ -15,18 +15,12 @@ namespace team12
         float coolDownTime = 5;
         GameObject crown;
 
-        public bool isStartingIt;
 
-        public static bool touching;
         // Start is called before the first frame update
         void Start()
         {
             rb = GetComponent<Rigidbody2D>();
             crown = GameObject.Find("Crown");
-            if (isStartingIt)
-            {
-                //Controller.SetTaggedPlayer(gameObject);
-            }
         }
 
         // Update is called once per frame
