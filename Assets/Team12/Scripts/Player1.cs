@@ -8,11 +8,13 @@ namespace team12
     public class Player1 : MicrogameInputEvents
     {
         Vector2 direction;
-        float speed = 300;
-        float boostForce = 500;
+        public float max_speed = 600; 
+        public float speed = 300;
+        
+        public float boostForce = 100;
         Rigidbody2D rb;
         public float dashCoolDown;
-        float coolDownTime = 1;
+        float coolDownTime = 2.5f;
         GameObject crown;
 
         SpriteRenderer sr;
@@ -27,6 +29,7 @@ namespace team12
             crown = GameObject.Find("Crown");
             sr = GetComponent<SpriteRenderer>();
             a = GetComponent<Animator>();
+
         }
 
         // Update is called once per frame
@@ -49,8 +52,8 @@ namespace team12
 
         private void FixedUpdate()
         {
-            rb.MovePosition(rb.position + direction * speed / 100 * Time.deltaTime);
-            //rb.AddForce(direction * speed * Time.deltaTime);
+            //rb.velocity.x = Mathf.Clamp(rb.velocity.x, 0, max_speed);
+            rb.AddForce(direction * speed * Time.deltaTime);
         }
 
         protected override void OnButton1Pressed(InputAction.CallbackContext context)
@@ -70,6 +73,7 @@ namespace team12
             if (collision.gameObject.layer == 6)
             {
                 Controller.setSinceLastTouch = true;
+                rb.AddForce(-(collision.gameObject.transform.position - transform.position).normalized * speed);
             }
         }
         private void OnCollisionExit2D(Collision2D collision)
