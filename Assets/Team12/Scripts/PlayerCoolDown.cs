@@ -22,7 +22,7 @@ namespace team12
         void Update()
         {
             rt.anchoredPosition = Camera.main.WorldToScreenPoint(player.transform.position);
-            s.value = 1 - playerScript.dashCoolDown;
+            s.value = 2.5f - playerScript.dashCoolDown;
         }
     }
 
