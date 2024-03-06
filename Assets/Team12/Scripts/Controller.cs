@@ -12,6 +12,9 @@ namespace team12
 
         public static bool setSinceLastTouch = false;
 
+        public AudioSource audioSource;
+        public AudioClip baseballBatSwing;
+
         private void Start()
         {
             player1 = GameObject.Find("Player 1");
@@ -21,7 +24,8 @@ namespace team12
             {
                 SetTaggedPlayer(player1);
 
-            } else
+            }
+            else
             {
                 SetTaggedPlayer(player2);
             }
@@ -34,25 +38,28 @@ namespace team12
                 TaggedPlayer = player;
             }
         }
+
         public static void SwapTaggedPlayer()
         {
             if (TaggedPlayer == player1)
             {
                 TaggedPlayer = player2;
-            } else if (TaggedPlayer == player2)
+            }
+            else if (TaggedPlayer == player2)
             {
                 TaggedPlayer = player1;
             }
         }
+
         private void Update()
         {
             if (setSinceLastTouch == true)
             {
                 SwapTaggedPlayer();
                 setSinceLastTouch = false;
+
+                audioSource.PlayOneShot(baseballBatSwing);
             }
-            
         }
     }
-
 }
