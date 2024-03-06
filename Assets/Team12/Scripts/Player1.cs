@@ -44,16 +44,14 @@ namespace team12
             {
                 crown.transform.position = transform.position;
             }
-
-
             
-
         }
 
         private void FixedUpdate()
         {
-            //rb.velocity.x = Mathf.Clamp(rb.velocity.x, 0, max_speed);
             rb.AddForce(direction * speed * Time.deltaTime);
+            rb.rotation = Mathf.Rad2Deg * Mathf.Atan2(rb.velocity.y * Vector2.up.x - rb.velocity.x * Vector2.up.y, rb.velocity.x * Vector2.up.x + rb.velocity.y * Vector2.up.y);
+
         }
 
         protected override void OnButton1Pressed(InputAction.CallbackContext context)
