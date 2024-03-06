@@ -17,12 +17,12 @@ MonoBehaviour:
   gameTitle: Spooky Tag
   gameIcon: {fileID: 0}
   prompt: Tag
-  singlePlayerScene: {fileID: 102900000, guid: 4755afce99c4443a0a995f8f54fdc1d5, type: 3}
-  twoPlayerScene: {fileID: 0}
+  singlePlayerScene: {fileID: 0}
+  twoPlayerScene: {fileID: 102900000, guid: 4755afce99c4443a0a995f8f54fdc1d5, type: 3}
   controls: []
   rightPlayerAltControls: []
-  singlePlayerScenePath: Assets/Team12/Scenes/Tag.unity
-  twoPlayerScenePath: 
+  singlePlayerScenePath: 
+  twoPlayerScenePath: Assets/Team12/Scenes/Tag.unity
   postgameMessages: []
   bannerImage: {fileID: 0}
   developerCredits: []
