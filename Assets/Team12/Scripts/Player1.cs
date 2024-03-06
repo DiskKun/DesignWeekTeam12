@@ -50,7 +50,11 @@ namespace team12
         private void FixedUpdate()
         {
             rb.AddForce(direction * speed * Time.deltaTime);
-            rb.rotation = Mathf.Rad2Deg * Mathf.Atan2(rb.velocity.y * Vector2.up.x - rb.velocity.x * Vector2.up.y, rb.velocity.x * Vector2.up.x + rb.velocity.y * Vector2.up.y);
+            if (rb.velocity.magnitude > 0.1)
+            {
+                rb.rotation = Mathf.Rad2Deg * Mathf.Atan2(rb.velocity.y * Vector2.up.x - rb.velocity.x * Vector2.up.y, rb.velocity.x * Vector2.up.x + rb.velocity.y * Vector2.up.y);
+
+            }
 
         }
 
