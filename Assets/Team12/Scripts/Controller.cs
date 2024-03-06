@@ -16,7 +16,15 @@ namespace team12
         {
             player1 = GameObject.Find("Player 1");
             player2 = GameObject.Find("Player 2");
-            SetTaggedPlayer(player2);
+            int r = Random.Range(1, 3);
+            if (r == 1)
+            {
+                SetTaggedPlayer(player1);
+
+            } else
+            {
+                SetTaggedPlayer(player2);
+            }
         }
 
         public static void SetTaggedPlayer(GameObject player)
