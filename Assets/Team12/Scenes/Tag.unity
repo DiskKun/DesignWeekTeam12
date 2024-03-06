@@ -903,7 +903,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1269771450}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 5
+  m_MaxValue: 3
   m_WholeNumbers: 0
   m_Value: 2.53
   m_OnValueChanged:
@@ -922,6 +922,7 @@ GameObject:
   - component: {fileID: 814732222}
   - component: {fileID: 814732221}
   - component: {fileID: 814732220}
+  - component: {fileID: 814732223}
   m_Layer: 6
   m_Name: Player 1
   m_TagString: Untagged
@@ -1082,6 +1083,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   getInputFrom: 1
   dashCoolDown: 0
+--- !u!95 &814732223
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814732217}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1b6c1ffd97c7a4484ac027cb3cb43a95, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &930552684
 GameObject:
   m_ObjectHideFlags: 0
@@ -1095,6 +1117,7 @@ GameObject:
   - component: {fileID: 930552687}
   - component: {fileID: 930552686}
   - component: {fileID: 930552685}
+  - component: {fileID: 930552690}
   m_Layer: 6
   m_Name: Player 2
   m_TagString: Untagged
@@ -1255,6 +1278,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &930552690
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 930552684}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1b6c1ffd97c7a4484ac027cb3cb43a95, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &961739749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1725,7 +1769,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 270656954}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 5
+  m_MaxValue: 3
   m_WholeNumbers: 0
   m_Value: 2.53
   m_OnValueChanged:

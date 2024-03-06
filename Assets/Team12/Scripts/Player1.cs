@@ -12,8 +12,12 @@ namespace team12
         float boostForce = 500;
         Rigidbody2D rb;
         public float dashCoolDown;
-        float coolDownTime = 5;
+        float coolDownTime = 3;
         GameObject crown;
+
+        SpriteRenderer sr;
+
+        Animator a;
 
 
         // Start is called before the first frame update
@@ -21,6 +25,8 @@ namespace team12
         {
             rb = GetComponent<Rigidbody2D>();
             crown = GameObject.Find("Crown");
+            sr = GetComponent<SpriteRenderer>();
+            a = GetComponent<Animator>();
         }
 
         // Update is called once per frame
@@ -35,21 +41,26 @@ namespace team12
             {
                 crown.transform.position = transform.position;
             }
+
+
+            
+
         }
 
         private void FixedUpdate()
         {
             rb.AddForce(direction * speed * Time.deltaTime);
-            
-
         }
 
         protected override void OnButton1Pressed(InputAction.CallbackContext context)
         {
             if (dashCoolDown <= 0)
             {
+                a.SetTrigger("Dash");
                 rb.AddForce(direction * boostForce);
+
                 dashCoolDown = coolDownTime;
+
             }
         }
 
