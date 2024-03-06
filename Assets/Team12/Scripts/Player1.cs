@@ -12,7 +12,7 @@ namespace team12
         float boostForce = 500;
         Rigidbody2D rb;
         public float dashCoolDown;
-        float coolDownTime = 3;
+        float coolDownTime = 1;
         GameObject crown;
 
         SpriteRenderer sr;
@@ -49,7 +49,8 @@ namespace team12
 
         private void FixedUpdate()
         {
-            rb.AddForce(direction * speed * Time.deltaTime);
+            rb.MovePosition(rb.position + direction * speed / 100 * Time.deltaTime);
+            //rb.AddForce(direction * speed * Time.deltaTime);
         }
 
         protected override void OnButton1Pressed(InputAction.CallbackContext context)
