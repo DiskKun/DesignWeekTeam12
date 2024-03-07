@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static Unity.VisualScripting.Member;
 
 namespace team12
 {
@@ -22,7 +23,7 @@ namespace team12
         Animator a;
 
         public AudioSource audioSource;
-        public AudioClip phasingThroughObjects;
+        public AudioClip[] dashSounds;
 
         // Start is called before the first frame update
         void Start()
@@ -31,7 +32,6 @@ namespace team12
             crown = GameObject.Find("Crown");
             sr = GetComponent<SpriteRenderer>();
             a = GetComponent<Animator>();
-
         }
 
         // Update is called once per frame
@@ -46,18 +46,16 @@ namespace team12
             {
                 crown.transform.position = transform.position;
             }
-            
         }
 
         private void FixedUpdate()
         {
             rb.AddForce(direction * speed * Time.deltaTime);
+
             if (rb.velocity.magnitude > 0.1)
             {
                 rb.rotation = Mathf.Rad2Deg * Mathf.Atan2(rb.velocity.y * Vector2.up.x - rb.velocity.x * Vector2.up.y, rb.velocity.x * Vector2.up.x + rb.velocity.y * Vector2.up.y);
-
             }
-
         }
 
         protected override void OnButton1Pressed(InputAction.CallbackContext context)
@@ -66,12 +64,12 @@ namespace team12
             {
                 a.SetTrigger("Dash");
 
-                audioSource.PlayOneShot(phasingThroughObjects);
+                AudioClip randomDash = dashSounds[Random.Range(0, dashSounds.Length)];
+                audioSource.PlayOneShot(randomDash);
 
                 rb.AddForce(direction * boostForce);
 
                 dashCoolDown = coolDownTime;
-
             }
         }
 
@@ -83,6 +81,7 @@ namespace team12
                 rb.AddForce(-(collision.gameObject.transform.position - transform.position).normalized * speed);
             }
         }
+
         private void OnCollisionExit2D(Collision2D collision)
         {
             Controller.setSinceLastTouch = false;

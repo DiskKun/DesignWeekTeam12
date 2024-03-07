@@ -2394,7 +2394,10 @@ MonoBehaviour:
   boostForce: 200
   dashCoolDown: 0
   audioSource: {fileID: 814732225}
-  phasingThroughObjects: {fileID: 8300000, guid: e6fc0d9a229400644a80a82bbd8037b8, type: 3}
+  dashSounds:
+  - {fileID: 8300000, guid: 4bca24cb6f21d5b42aa0d3194c69d6f2, type: 3}
+  - {fileID: 8300000, guid: bb039e30ffa3f8149b84fc7b7c5ca081, type: 3}
+  - {fileID: 8300000, guid: e5fa9bbf25d2a1a4282b2b629a297672, type: 3}
 --- !u!95 &814732223
 Animator:
   serializedVersion: 5
@@ -2460,7 +2463,7 @@ AudioSource:
   m_GameObject: {fileID: 814732217}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 7923390215618978061, guid: 0ac3ac4d5827e1c479ab7b571f0bb5b2, type: 2}
+  OutputAudioMixerGroup: {fileID: 8417502064440290722, guid: 0ac3ac4d5827e1c479ab7b571f0bb5b2, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -2614,7 +2617,10 @@ MonoBehaviour:
   boostForce: 200
   dashCoolDown: 0
   audioSource: {fileID: 930552692}
-  phasingThroughObjects: {fileID: 8300000, guid: e6fc0d9a229400644a80a82bbd8037b8, type: 3}
+  dashSounds:
+  - {fileID: 8300000, guid: 4bca24cb6f21d5b42aa0d3194c69d6f2, type: 3}
+  - {fileID: 8300000, guid: bb039e30ffa3f8149b84fc7b7c5ca081, type: 3}
+  - {fileID: 8300000, guid: e5fa9bbf25d2a1a4282b2b629a297672, type: 3}
 --- !u!212 &930552688
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2747,7 +2753,7 @@ AudioSource:
   m_GameObject: {fileID: 930552684}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 7923390215618978061, guid: 0ac3ac4d5827e1c479ab7b571f0bb5b2, type: 2}
+  OutputAudioMixerGroup: {fileID: 8417502064440290722, guid: 0ac3ac4d5827e1c479ab7b571f0bb5b2, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -3093,7 +3099,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -4019815178448891431, guid: 0ac3ac4d5827e1c479ab7b571f0bb5b2, type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d43df998c6e1d554abe4531e6f8ae47d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
