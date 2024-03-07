@@ -15,20 +15,6 @@ AudioMixerSnapshotController:
     7a005a3cc70ac0c489b2be602acb95a6: 0
     2021c8ff7fff8454e96cd7b1eeca1529: 0
   m_TransitionOverrides: {}
---- !u!244 &-5140079991475244447
-AudioMixerEffectController:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_EffectID: 956f36a3b058f1242980ff4ad8148de7
-  m_EffectName: Attenuation
-  m_MixLevel: 6fcd4c40f80909c4dbd3fcd47ced347c
-  m_Parameters: []
-  m_SendTarget: {fileID: 0}
-  m_EnableWetMix: 0
-  m_Bypass: 0
 --- !u!243 &-4019815178448891431
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -98,7 +84,6 @@ AudioMixerController:
     - 54f87933f1f4c7947b7d4fdc8989ff47
     - 1913b6e754641cb46aefcae45af46bf0
     - 0dc40537e5b8c0e46b66d0b8139c6bc1
-    - d057c20e7fc4f3a47aeb4277f1e875ce
     - 1a39b67d6689f8948813f722d79eb3b9
     name: View
   m_CurrentViewIndex: 0
@@ -116,7 +101,6 @@ AudioMixerGroupController:
   - {fileID: -4019815178448891431}
   - {fileID: 8417502064440290722}
   - {fileID: 7923390215618978061}
-  - {fileID: 3136238364939630880}
   m_Volume: ed06a846db59e4c4aa1da7c7d0459975
   m_Pitch: 8fd9a1d110c0a004485d3ce5c3c42504
   m_Send: 00000000000000000000000000000000
@@ -150,11 +134,11 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: e53441cb4fb400c43a927838c1eecac8
   m_FloatValues:
-    dc621144a8c3a99478ab5a1508bebca0: -0.05
+    dc621144a8c3a99478ab5a1508bebca0: 0.7621187
     5f5616b5325f80849ad1ea047b46af32: -0.05
     ed06a846db59e4c4aa1da7c7d0459975: -0.05
-    7a005a3cc70ac0c489b2be602acb95a6: -3.3373494
-    2021c8ff7fff8454e96cd7b1eeca1529: -0.05
+    7a005a3cc70ac0c489b2be602acb95a6: -18.249063
+    2021c8ff7fff8454e96cd7b1eeca1529: 3.4923484
   m_TransitionOverrides: {}
 --- !u!244 &1105500379620236627
 AudioMixerEffectController:
@@ -170,25 +154,6 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
---- !u!243 &3136238364939630880
-AudioMixerGroupController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Victory Jingle
-  m_AudioMixer: {fileID: 24100000}
-  m_GroupID: d057c20e7fc4f3a47aeb4277f1e875ce
-  m_Children: []
-  m_Volume: 5f5616b5325f80849ad1ea047b46af32
-  m_Pitch: 5e824a811a98fcd46a15c6ba246841e0
-  m_Send: 00000000000000000000000000000000
-  m_Effects:
-  - {fileID: -5140079991475244447}
-  m_UserColorIndex: 0
-  m_Mute: 0
-  m_Solo: 0
-  m_BypassEffects: 0
 --- !u!243 &7923390215618978061
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
