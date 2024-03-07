@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d24fbde2c24ab1544bd81b52842e8ec5, type: 3}
-  m_Name: Spooky Tag
+  m_Name: T12_SpookyTag
   m_EditorClassIdentifier: 
   includeInRandomizer: 1
   teamNumber: 12
@@ -32,7 +32,7 @@ MonoBehaviour:
     secondary: 0
   rightPlayerAltControls: []
   singlePlayerScenePath: 
-  twoPlayerScenePath: Assets/Team12/Scenes/Tag.unity
+  twoPlayerScenePath: Assets/Team12/Scenes/Spooky Tag.unity
   postgameMessages:
   - Boo hoo.
   bannerImage: {fileID: 21300000, guid: 036837289bc1f46088421695e7ebb3c3, type: 3}
