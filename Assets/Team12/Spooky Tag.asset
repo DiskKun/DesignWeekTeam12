@@ -34,7 +34,13 @@ MonoBehaviour:
   singlePlayerScenePath: 
   twoPlayerScenePath: Assets/Team12/Scenes/Tag.unity
   postgameMessages:
-  - 
+  - Boo hoo.
   bannerImage: {fileID: 21300000, guid: 036837289bc1f46088421695e7ebb3c3, type: 3}
-  developerCredits: []
+  developerCredits:
+  - Lucas Hourahine
+  - Ayman Abbas
+  - Chase Ross
+  - Ali Saneei
+  - Daniel Arreola
+  - Mitch O'Brien
   licensedWorksCredits: []
