@@ -34,7 +34,10 @@ MonoBehaviour:
   singlePlayerScenePath: 
   twoPlayerScenePath: Assets/Team12/Scenes/Spooky Tag.unity
   postgameMessages:
-  - Boo hoo.
+  - Playing tag with ghosts is best on Halloween.
+  - Ghosts enjoy playing baseball and tag in their spare time.
+  - Playing tag with a ghost is not a good idea for a human; because ghosts can cheat
+    by phasing through obstacles.
   bannerImage: {fileID: 21300000, guid: 036837289bc1f46088421695e7ebb3c3, type: 3}
   developerCredits:
   - Lucas Hourahine
