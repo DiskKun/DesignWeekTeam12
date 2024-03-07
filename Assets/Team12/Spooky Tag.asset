@@ -13,13 +13,23 @@ MonoBehaviour:
   m_Name: Spooky Tag
   m_EditorClassIdentifier: 
   includeInRandomizer: 1
-  teamNumber: 0
+  teamNumber: 12
   gameTitle: Spooky Tag
   gameIcon: {fileID: 0}
-  prompt: Tag
+  announcerText: Tag
+  announcerAudioFile: Tag-RX10MDc_309-01
+  _announcerAudio: {fileID: 8300000, guid: e7f17e447f854da40ac50d379e05fbe5, type: 3}
   singlePlayerScene: {fileID: 0}
   twoPlayerScene: {fileID: 102900000, guid: 4755afce99c4443a0a995f8f54fdc1d5, type: 3}
-  controls: []
+  controls:
+  - label: Move
+    primary: 4
+    joiner: 0
+    secondary: 0
+  - label: Dash
+    primary: 1
+    joiner: 0
+    secondary: 0
   rightPlayerAltControls: []
   singlePlayerScenePath: 
   twoPlayerScenePath: Assets/Team12/Scenes/Tag.unity
