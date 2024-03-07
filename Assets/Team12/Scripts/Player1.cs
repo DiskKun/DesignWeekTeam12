@@ -45,7 +45,20 @@ namespace team12
             if (Controller.TaggedPlayer == gameObject)
             {
                 crown.transform.position = transform.position;
+                if (rb.velocity.magnitude > 0.1)
+                {
+                    crown.transform.rotation = Quaternion.Euler(0, 0, rb.rotation);
+                }
             }
+            if (Controller.TaggedPlayer != gameObject)
+            {
+                a.SetBool("It", false);
+            }
+            else if (Controller.TaggedPlayer == gameObject)
+            {
+                a.SetBool("It", true);
+            }
+
         }
 
         private void FixedUpdate()
@@ -55,6 +68,7 @@ namespace team12
             if (rb.velocity.magnitude > 0.1)
             {
                 rb.rotation = Mathf.Rad2Deg * Mathf.Atan2(rb.velocity.y * Vector2.up.x - rb.velocity.x * Vector2.up.y, rb.velocity.x * Vector2.up.x + rb.velocity.y * Vector2.up.y);
+
             }
         }
 
@@ -77,6 +91,7 @@ namespace team12
         {
             if (collision.gameObject.layer == 6)
             {
+
                 Controller.setSinceLastTouch = true;
                 rb.AddForce(-(collision.gameObject.transform.position - transform.position).normalized * speed);
             }
@@ -85,6 +100,21 @@ namespace team12
         private void OnCollisionExit2D(Collision2D collision)
         {
             Controller.setSinceLastTouch = false;
+        }
+
+        protected override void OnTimesUp()
+        {
+
+            // Code to execute when time runs out in the game
+
+            if (Controller.TaggedPlayer == gameObject)
+            {
+                gameObject.transform.position = new Vector3(1000, 1000, 0);
+                gameObject.SetActive(false);
+                crown.SetActive(false);
+
+            }
+
         }
     }
 }

@@ -20,6 +20,7 @@ namespace team12
         public AudioClip disappearance;
 
         public AudioMixerSnapshot fadeOut;
+        public AudioMixerSnapshot fadeIn;
 
         private void Start()
         {
@@ -35,6 +36,8 @@ namespace team12
             {
                 SetTaggedPlayer(player2);
             }
+            fadeOut.TransitionTo(0.1f);
+            fadeIn.TransitionTo(10);
         }
 
         public static void SetTaggedPlayer(GameObject player)
