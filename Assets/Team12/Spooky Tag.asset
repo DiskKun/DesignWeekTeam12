@@ -21,15 +21,7 @@ MonoBehaviour:
   _announcerAudio: {fileID: 8300000, guid: e7f17e447f854da40ac50d379e05fbe5, type: 3}
   singlePlayerScene: {fileID: 0}
   twoPlayerScene: {fileID: 102900000, guid: 4755afce99c4443a0a995f8f54fdc1d5, type: 3}
-  controls:
-  - label: Move
-    primary: 4
-    joiner: 0
-    secondary: 0
-  - label: Dash
-    primary: 1
-    joiner: 0
-    secondary: 0
+  controls: []
   rightPlayerAltControls: []
   singlePlayerScenePath: 
   twoPlayerScenePath: Assets/Team12/Scenes/Tag.unity

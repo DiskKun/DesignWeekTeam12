@@ -21,6 +21,8 @@ namespace team12
 
         Animator a;
 
+        public AudioSource audioSource;
+        public AudioClip phasingThroughObjects;
 
         // Start is called before the first frame update
         void Start()
@@ -63,6 +65,9 @@ namespace team12
             if (dashCoolDown <= 0)
             {
                 a.SetTrigger("Dash");
+
+                audioSource.PlayOneShot(phasingThroughObjects);
+
                 rb.AddForce(direction * boostForce);
 
                 dashCoolDown = coolDownTime;
