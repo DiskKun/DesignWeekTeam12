@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static Unity.VisualScripting.Member;
 
 namespace team12
 {
@@ -78,6 +75,7 @@ namespace team12
             {
                 a.SetTrigger("Dash");
 
+                // This tutorial was used for making the random sounds work: https://youtu.be/c2c-x79PPXw?si=DRPLQoaMFgHr3oez
                 AudioClip randomDash = dashSounds[Random.Range(0, dashSounds.Length)];
                 audioSource.PlayOneShot(randomDash);
 
@@ -112,9 +110,7 @@ namespace team12
                 gameObject.transform.position = new Vector3(1000, 1000, 0);
                 gameObject.SetActive(false);
                 crown.SetActive(false);
-
             }
-
         }
     }
 }

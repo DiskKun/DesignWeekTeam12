@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -37,7 +34,7 @@ namespace team12
                 SetTaggedPlayer(player2);
             }
             fadeOut.TransitionTo(0.1f);
-            fadeIn.TransitionTo(10);
+            fadeIn.TransitionTo(4);
         }
 
         public static void SetTaggedPlayer(GameObject player)
@@ -71,6 +68,7 @@ namespace team12
             }
         }
 
+        // This website was used for making the audio fade out: https://johnleonardfrench.com/how-to-fade-audio-in-unity-i-tested-every-method-this-ones-the-best/#third_method
         protected override void OnTimesUp()
         {
             // Code to execute when time runs out in the game
