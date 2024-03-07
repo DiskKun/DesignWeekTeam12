@@ -975,6 +975,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 350746753}
   baseballBatSwing: {fileID: 8300000, guid: 76dfdf50408ea8048aeef59a2860c293, type: 3}
+  disappearance: {fileID: 8300000, guid: 919e6c42ae18de8418281095fe48b07e, type: 3}
+  fadeOut: {fileID: -8197621542105304165, guid: 0ac3ac4d5827e1c479ab7b571f0bb5b2, type: 2}
 --- !u!82 &350746753
 AudioSource:
   m_ObjectHideFlags: 0

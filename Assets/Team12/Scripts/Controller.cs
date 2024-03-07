@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 
 namespace team12
 {
@@ -13,7 +15,11 @@ namespace team12
         public static bool setSinceLastTouch = false;
 
         public AudioSource audioSource;
+
         public AudioClip baseballBatSwing;
+        public AudioClip disappearance;
+
+        public AudioMixerSnapshot fadeOut;
 
         private void Start()
         {
@@ -60,6 +66,15 @@ namespace team12
 
                 audioSource.PlayOneShot(baseballBatSwing);
             }
+        }
+
+        protected override void OnTimesUp()
+        {
+            // Code to execute when time runs out in the game
+
+            audioSource.PlayOneShot(disappearance);
+
+            fadeOut.TransitionTo(4);
         }
     }
 }
