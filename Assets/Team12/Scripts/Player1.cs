@@ -49,11 +49,11 @@ namespace team12
             }
             if (Controller.TaggedPlayer != gameObject)
             {
-                a.SetBool("It", false);
+                a.SetBool("it", false);
             }
             else if (Controller.TaggedPlayer == gameObject)
             {
-                a.SetBool("It", true);
+                a.SetBool("it", true);
             }
 
         }
@@ -73,7 +73,7 @@ namespace team12
         {
             if (dashCoolDown <= 0)
             {
-                a.SetTrigger("Dash");
+                a.SetTrigger("dash");
 
                 // This tutorial was used for making the random sounds work: https://youtu.be/c2c-x79PPXw?si=DRPLQoaMFgHr3oez
                 AudioClip randomDash = dashSounds[Random.Range(0, dashSounds.Length)];
